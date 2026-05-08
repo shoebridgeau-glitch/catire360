@@ -387,11 +387,14 @@
     }
 
     .about-image img {
-      width: 100%;
-      height: auto;
-      max-height: 550px;
+      width: 200px;
+      height: 200px;
       object-fit: cover;
-      border: 1px solid var(--sand);
+      object-position: center top;
+      border-radius: 50%;
+      border: 3px solid var(--sand);
+      display: block;
+      margin: 0 auto;
     }
 
     .about-body {
@@ -641,6 +644,30 @@
       .about-content { order: 2; }
       .about-image { order: 1; display: flex; justify-content: center; }
 
+
+      .about-grid {
+        grid-template-columns: 1fr !important;
+        gap: 28px;
+      }
+      .about-image {
+        order: -1;
+        display: flex;
+        justify-content: center;
+      }
+      .about-image img {
+        width: 150px;
+        height: 150px;
+      }
+      .about-content {
+        order: 1;
+        text-align: center;
+      }
+      .about-content .divider {
+        margin: 24px auto;
+      }
+      .about-body {
+        text-align: left;
+      }
       .faq-question { font-size: 15px; padding: 16px 0; }
 
       .triple-grid { grid-template-columns: 1fr; }
@@ -794,7 +821,7 @@
   <section class="about" id="nosotros">
     <div class="about-grid">
       <div class="about-image fade-up">
-        <img src="portrait.jpg" alt="Austin Shoebridge — Catire360" style="width:200px;height:200px;object-fit:cover;object-position:center top;border-radius:50%;border:3px solid var(--sand);display:block;margin:0 auto;">
+        <img src="portrait.jpg" alt="Austin Shoebridge — Catire360">
       </div>
       <div class="about-content fade-up">
         <p class="section-tag">Sobre mí</p>
